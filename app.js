@@ -5,12 +5,14 @@ const mongoose = require('mongoose');
 const PORT= process.env.PORT || 2000;
 const notFound = require('./middleware/notfound');
 mongoose.set("strictQuery", true);
+const cors = require('cors');
 
 const teamRouter = require('./routes/teamRouter')
 
 
 //middleware
 app.use(teamRouter)
+app.use(cors())
 app.use(express.json());
 
 //error route
