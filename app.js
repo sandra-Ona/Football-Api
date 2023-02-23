@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const PORT= process.env.PORT || 2000;
-const notFound = require('./middleware/notfound');
+const notFound = require('./middleware/notFound');
 mongoose.set("strictQuery", true);
 const cors = require('cors');
 
